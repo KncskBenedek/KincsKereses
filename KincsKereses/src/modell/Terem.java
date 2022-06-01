@@ -7,15 +7,14 @@ public class Terem {
     private boolean megtalalva;
     private String leiras;
 
-    public Terem(int ferohely, String leiras) {
+    private  Terem(int ferohely, String leiras) {
         this.ferohely = ferohely;
-        kincsesLadak = new KincsesLada[this.ferohely];
-        kincsesLadak = alapLadak();
+        alapHaromLada();
         this.leiras = leiras;
         megtalalva = false;
     }
 
-    public Terem(int ferohely) {
+    private  Terem(int ferohely) {
         this(ferohely, (ferohely + " láda közül az egyik rejti a kincset. Mindegyiken van "
                 + "egy felirat, de csak az egyik láda állítása igaz!"));
     }
@@ -32,8 +31,11 @@ public class Terem {
 
     }
 
-    public KincsesLada[] alapLadak() {
-        return null;
+    private  void alapHaromLada() {
+        kincsesLadak = new KincsesLada[]{new KincsesLada(Tipus.arany,"én rejtem a kincset"),
+        new KincsesLada(Tipus.ezüst,"nem én rejtem a kincset"),
+        new KincsesLada(Tipus.bronz, "az arany hazudik", "kincs")};
+        
     }
 
     public KincsesLada[] getKincsesLadak() {

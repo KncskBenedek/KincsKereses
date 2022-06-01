@@ -3,21 +3,21 @@ package modell;
 public class Lada {
 
     private Tipus tipus;
-    private String[] tartalom;
+    private String tartalom;
 
     public Lada() {
-        this(new String[]{"semmi"});
+        this("semmi");
     }
 
     protected Lada(Tipus tipus) {
-        this(tipus, new String[]{"semmi"});
+        this(tipus,"semmi");
     }
 
-    public Lada(String[] tartalom) {
+    public Lada(String tartalom) {
         this(Tipus.fa, tartalom);
     }
 
-    protected Lada(Tipus tipus, String[] tartalom) {
+    protected Lada(Tipus tipus, String tartalom) {
         this.tipus = tipus;
         this.tartalom = tartalom;
     }
@@ -26,7 +26,7 @@ public class Lada {
         return tipus;
     }
 
-    public String[] getTartalom() {
+    public String getTartalom() {
         return tartalom;
     }
     
