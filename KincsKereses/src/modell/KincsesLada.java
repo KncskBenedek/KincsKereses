@@ -6,7 +6,6 @@ public class KincsesLada extends Lada {
     
     public KincsesLada(Tipus tipus, String tartalom, String felirat) {
         super(tipus, tartalom);
-
         this.felirat = felirat;
     }
 

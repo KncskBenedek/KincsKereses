@@ -13,7 +13,7 @@ public class TesztTerem {
     public void isMegtalalvaEltalal() {
         System.out.println("isMegtalalva eltalál eset");
         Terem tesztTerem = new Terem();
-        boolean eredmeny = tesztTerem.isMegtalalva();
+        boolean eredmeny = tesztTerem.isMegtalalva(2);
         assert eredmeny == true : "isMegtalalva eltalált esetnél megbukott";
         System.out.println("isMegtalalva eltalál eset sikeres");
     }

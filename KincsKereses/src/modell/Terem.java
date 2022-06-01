@@ -23,9 +23,7 @@ public class Terem {
         this(3);
     }
 
-    public boolean bekeres(int poz) {
-        return false;
-    }
+    
 
     public void jatek() {
         
@@ -34,7 +32,7 @@ public class Terem {
     private  void alapHaromLada() {
         kincsesLadak = new KincsesLada[]{new KincsesLada(Tipus.arany,"én rejtem a kincset"),
         new KincsesLada(Tipus.ezüst,"nem én rejtem a kincset"),
-        new KincsesLada(Tipus.bronz, "kincs", "az arany hazudik")};
+        new KincsesLada(Tipus.bronz, Lada.KINCS, "az arany hazudik")};
         
     }
 
@@ -42,11 +40,19 @@ public class Terem {
         return kincsesLadak;
     }
 
-    public boolean isMegtalalva() {
-        return false;
+    public boolean isMegtalalva(int poz) {
+        boolean allapot = kincsesLadak[poz].getTartalom().equals(Lada.KINCS);
+        if(allapot){
+            this.megtalalva = allapot;
+        }
+        return megtalalva;
     }
 
-    public String getLeiras() {
+    public boolean isMegtalalva() {
+        return megtalalva;
+    }
+
+        public String getLeiras() {
         return leiras;
     }
     
