@@ -1,8 +1,7 @@
-
 package modell;
 
-
 public class Terem {
+
     private int ferohely;
     private KincsesLada[] kincsesLadak;
     private boolean megtalalva;
@@ -16,26 +15,37 @@ public class Terem {
         megtalalva = false;
     }
 
-
-
     public Terem(int ferohely) {
-        this(ferohely, "3 láda közül az egyik rejti a kincset. Mindegyiken van egy felirat, de csak az egyik láda állítása igaz!");
+        this(ferohely, (ferohely + " láda közül az egyik rejti a kincset. Mindegyiken van "
+                + "egy felirat, de csak az egyik láda állítása igaz!"));
     }
 
     public Terem() {
         this(3);
     }
-    
-    
-    
-    
-    public boolean bekeres(int poz){
+
+    public boolean bekeres(int poz) {
         return false;
     }
-    public void jatek(){
-        
+
+    public void jatek() {
+
     }
-    public KincsesLada[] alapLadak(){
+
+    public KincsesLada[] alapLadak() {
         return null;
     }
+
+    public KincsesLada[] getKincsesLadak() {
+        return kincsesLadak;
+    }
+
+    public boolean isMegtalalva() {
+        return megtalalva;
+    }
+
+    public String getLeiras() {
+        return leiras;
+    }
+    
 }

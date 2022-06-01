@@ -21,4 +21,14 @@ public class Lada {
         this.tipus = tipus;
         this.tartalom = tartalom;
     }
+
+    public Tipus getTipus() {
+        return tipus;
+    }
+
+    public String[] getTartalom() {
+        return tartalom;
+    }
+    
+    
 }
