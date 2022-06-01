@@ -6,12 +6,14 @@ public class Terem {
     private KincsesLada[] kincsesLadak;
     private boolean megtalalva;
     private String leiras;
-
+    private int probalkozasok;
+    
     private  Terem(int ferohely, String leiras) {
         this.ferohely = ferohely;
         alapHaromLada();
         this.leiras = leiras;
         megtalalva = false;
+        probalkozasok = 0;
     }
 
     private  Terem(int ferohely) {
@@ -45,6 +47,7 @@ public class Terem {
         if(allapot){
             this.megtalalva = allapot;
         }
+        probalkozasok++;
         return megtalalva;
     }
 
