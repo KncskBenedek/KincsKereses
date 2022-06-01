@@ -18,7 +18,8 @@ public class Terem {
 
     private  Terem(int ferohely) {
         this(ferohely, (ferohely + " láda közül az egyik rejti a kincset. Mindegyiken van "
-                + "egy felirat, de csak az egyik láda állítása igaz!"));
+                + "egy felirat, de csak az egyik láda állítása igaz!"
+                + "Találd ki melyikben van a kincs!"));
     }
 
     public Terem() {
