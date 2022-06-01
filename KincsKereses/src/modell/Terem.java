@@ -28,13 +28,13 @@ public class Terem {
     }
 
     public void jatek() {
-
+        
     }
 
     private  void alapHaromLada() {
         kincsesLadak = new KincsesLada[]{new KincsesLada(Tipus.arany,"én rejtem a kincset"),
         new KincsesLada(Tipus.ezüst,"nem én rejtem a kincset"),
-        new KincsesLada(Tipus.bronz, "az arany hazudik", "kincs")};
+        new KincsesLada(Tipus.bronz, "kincs", "az arany hazudik")};
         
     }
 
@@ -43,7 +43,7 @@ public class Terem {
     }
 
     public boolean isMegtalalva() {
-        return megtalalva;
+        return false;
     }
 
     public String getLeiras() {
