@@ -6,18 +6,19 @@ public class Lada {
     private String[] tartalom;
 
     public Lada() {
-
+        this(new String[]{"semmi"});
     }
 
     protected Lada(Tipus tipus) {
-
+        this(tipus, new String[]{"semmi"});
     }
 
     public Lada(String[] tartalom) {
-
+        this(Tipus.fa, tartalom);
     }
 
     protected Lada(Tipus tipus, String[] tartalom) {
-
+        this.tipus = tipus;
+        this.tartalom = tartalom;
     }
 }
