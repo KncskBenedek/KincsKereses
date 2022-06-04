@@ -21,18 +21,7 @@ public class MainForm extends javax.swing.JFrame {
 
     private void gombokAlap() {
         gombok = new JButton[3];
-        Component[] comps = ladaPanel.getComponents();
-        
-//        for (int i = 0; i < hossz ; i++) {
-//            System.out.println("bent");
-//           if(comps[i] instanceof JButton){ // nem megy be
-//               System.out.println("bentebb");
-//               gombok[n] =(JButton) comps[i];
-//               
-//               n++;
-//           }
-//        }
-        //ideiglenes
+
         gombok[0] = lada1;
         gombok[1] = lada2;
         gombok[2] = lada3;
@@ -253,9 +242,7 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void kivalaszt(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kivalaszt
-
         JButton gomb = (JButton) evt.getSource();
-        
         int i = 0;
         while (i < gombok.length && !(gomb == gombok[i])) {
             i++;
@@ -264,24 +251,25 @@ public class MainForm extends javax.swing.JFrame {
         if (i < gombok.length) {
             ellenorzes(i);
         }
-        
+
     }//GEN-LAST:event_kivalaszt
 
     private void ellenorzes(int i) {
         boolean talaltE = terem.getKincsesLadak()[i].getTartalom().equals(KincsesLada.KINCS);
-        visszajelzes.setText(talaltE?"<html>Gratulálok megtatáltad.</html>":"<html>Nem sikerült.</html>");
-        if(talaltE){
+        visszajelzes.setText(talaltE ? "<html>Gratulálok megtalálnod " + terem.getProbalkozasok() + " próbálkozásból.</html>" : "<html>Nem sikerült.</html>");
+        if (talaltE) {
             disableGomb();
         }
-        
+
     }
 
-    private void disableGomb(){
+    private void disableGomb() {
         for (int i = 0; i < gombok.length; i++) {
             disableGomb(gombok[i]);
         }
     }
-    private void disableGomb(JButton gomb){
+
+    private void disableGomb(JButton gomb) {
         gomb.setEnabled(false);
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -303,7 +291,6 @@ public class MainForm extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void alapLeirasok() {
-
         JLabel[] leirasok = new JLabel[]{aranyLabel, ezustLabel, bronzLabel};
         leiras.setText("<html>" + terem.getLeiras() + "</html>");
         for (int i = 0; i < leirasok.length; i++) {

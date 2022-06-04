@@ -1,9 +1,9 @@
 package modell;
 
 public class KincsesLada extends Lada {
-    
+
     private String felirat;
-    
+
     public KincsesLada(Tipus tipus, String tartalom, String felirat) {
         super(tipus, tartalom);
         this.felirat = felirat;

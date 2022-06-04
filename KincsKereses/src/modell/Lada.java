@@ -1,6 +1,7 @@
 package modell;
 
 public class Lada {
+
     public static final String KINCS = "kincs", SEMMI = "semmi";
     private Tipus tipus;
     private String tartalom;
@@ -10,7 +11,7 @@ public class Lada {
     }
 
     protected Lada(Tipus tipus) {
-        this(tipus,Lada.SEMMI);
+        this(tipus, Lada.SEMMI);
     }
 
     public Lada(String tartalom) {
@@ -29,6 +30,5 @@ public class Lada {
     public String getTartalom() {
         return tartalom;
     }
-    
-    
+
 }
